@@ -2,6 +2,10 @@
 
 Simple Go app to redirect [Hashicorp Vault](https://www.vaultproject.io/) requests to the active node in a HA cluster.
 
+## Status
+
+__WARNING:__ Work was begun on this, but it is not complete or even really usable. This was my first-ever foray into Go. While I was able to get the basic logic working, it's become apparent that getting a production-ready, fully tested, documented service isn't going to happen within my time constraints. As such, I'm working on implementing the same functionality in Python's Twisted networking framework. That interim version can be seen at [https://github.com/jantman/vault-redirector-twisted](https://github.com/jantman/vault-redirector-twisted); initial capacity tests show performance within 25% of the Go variant at 1000 requests per second, with a _lower_ maximum response time.
+
 ## Purpose
 
 There's a bit of a gap in usability of [Vault](https://www.vaultproject.io/) in a [High Availability](https://www.vaultproject.io/docs/concepts/ha.html) mode, at least in AWS:
