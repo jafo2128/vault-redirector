@@ -47,13 +47,21 @@ Here is example of the [Consul service definition](https://www.consul.io/docs/ag
 }
 ```
 
+## Build
+
+You'll need Go 1.4+ (1.6+ highly recommended) installed and setup per [http://golang.org/doc/code.html](http://golang.org/doc/code.html), and you'll need ``$GOPATH/bin`` in your ``PATH``. The build process is as similar to that of [Vault](https://www.vaultproject.io/docs/install/install.html) as possible; in fact we're using Vault's build tooling to ensure as close platform compatibility as possible.
+
+1. Clone this git repository into your GOPATH: [https://github.com/manheim/vault-redirector.git](https://github.com/manheim/vault-redirector.git)
+2. Verify that the file ``$GOPATH/src/github.com/manheim/vault-redirector/main.go`` exists. If it doesn't, then you didn't clone vault-redirector into the proper path.
+3. Run ``make dev`` to generate the binary for your current system.
+
 ## Installation
 
-TODO. Build and install.
+Simply place the
 
 ## Usage
 
-TODO: usage. Include systemd unit file.
+TODO: usage
 
 ## Logging and Debugging
 
@@ -62,3 +70,7 @@ TODO.
 ## Testing
 
 TODO.
+
+## License
+
+vault-redirector is licensed under the MIT license; see ``LICENSE`` for the text of the license. The build tooling (``Makefile`` and ``scripts/``) are from the Vault project and licensed under the Mozilla Public License, version 2.0; see ``LICENSE-build-tools`` for the text of the license.
