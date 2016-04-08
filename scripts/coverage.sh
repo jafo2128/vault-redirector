@@ -10,7 +10,7 @@
 #     --coveralls Push coverage statistics to coveralls.io
 #
 
-set -e
+set -e -x
 
 workdir=.cover
 profile="$workdir/cover.out"
